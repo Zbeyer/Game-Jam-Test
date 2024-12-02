@@ -10,11 +10,21 @@ config_version=5
 
 [application]
 
-config/name="GJT"
+config/name="gjt"
+run/main_scene="res://scenes/level.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1980
+window/size/viewport_height=1080
+window/size/mode=2
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
+anti_aliasing/quality/msaa_2d=1
+anti_aliasing/quality/msaa_3d=1
