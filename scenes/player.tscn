@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvyf6b4rx74jb"]
+[gd_scene load_steps=4 format=3 uid="uid://dvyf6b4rx74jb"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_vunef"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7yctj"]
 
@@ -7,6 +9,7 @@ points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607,
 
 [node name="Player" type="RigidBody3D"]
 lock_rotation = true
+script = ExtResource("1_vunef")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_7yctj")
