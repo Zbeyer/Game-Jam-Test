@@ -31,7 +31,7 @@ script = ExtResource("1_t01t1")
 sprite_frames = SubResource("SpriteFrames_pwiah")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(1.1, 1.08675)
+scale = Vector2(0.9, 0.9)
 shape = SubResource("CircleShape2D_3fxls")
 
 [node name="Hurtzone" parent="." instance=ExtResource("2_2lllf")]
@@ -41,10 +41,12 @@ scale = Vector2(6, 6)
 shape = SubResource("RectangleShape2D_h4i0j")
 debug_color = Color(0.805763, 0.00234607, 0.995066, 0.42)
 
-[node name="RayCastDownRight" type="RayCast2D" parent="."]
-
 [node name="RayCastDownLeft" type="RayCast2D" parent="."]
+position = Vector2(-50, 0)
 
-[node name="RayCastLeft" type="RayCast2D" parent="."]
+[node name="RayCastDownRight" type="RayCast2D" parent="."]
+position = Vector2(50, 0)
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]

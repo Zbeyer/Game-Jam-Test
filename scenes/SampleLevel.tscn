@@ -5,7 +5,7 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4uel"]
 texture = ExtResource("1_sa4ty")
-texture_region_size = Vector2i(40, 40)
+texture_region_size = Vector2i(1, 1)
 1:1/size_in_atlas = Vector2i(3, 3)
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
