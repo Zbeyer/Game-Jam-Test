@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8ugh1dcah2lb"]
+[gd_scene load_steps=8 format=3 uid="uid://b8ugh1dcah2lb"]
 
+[ext_resource type="Script" path="res://scripts/Enemy.gd" id="1_t01t1"]
 [ext_resource type="Texture2D" uid="uid://bnrn3ikqxc615" path="res://assets/sample/boxes.drawio.png" id="1_u6ukt"]
 [ext_resource type="PackedScene" uid="uid://w2doabrquijt" path="res://scenes/Hurtzone.tscn" id="2_2lllf"]
 
@@ -18,14 +19,32 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_3fxls"]
+radius = 52.345
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h4i0j"]
 
 [node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_t01t1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pwiah")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.1, 1.08675)
+shape = SubResource("CircleShape2D_3fxls")
+
 [node name="Hurtzone" parent="." instance=ExtResource("2_2lllf")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtzone"]
+scale = Vector2(6, 6)
 shape = SubResource("RectangleShape2D_h4i0j")
+debug_color = Color(0.805763, 0.00234607, 0.995066, 0.42)
+
+[node name="RayCastDownRight" type="RayCast2D" parent="."]
+
+[node name="RayCastDownLeft" type="RayCast2D" parent="."]
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+
+[node name="RayCastRight" type="RayCast2D" parent="."]

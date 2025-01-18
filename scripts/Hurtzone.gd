@@ -5,3 +5,4 @@ func _on_body_entered(body):
 	#if body.has_method("player"):
 		#body.hearts -= 1
 		#body.on_hit()
+	pass
