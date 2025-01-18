@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://w2doabrquijt"]
+[gd_scene load_steps=2 format=3 uid="uid://w2doabrquijt"]
 
-[node name="Hurtzone" type="Node2D"]
+[ext_resource type="Script" path="res://scripts/Hurtzone.gd" id="1_y0hnh"]
+
+[node name="Hurtzone" type="Area2D"]
+script = ExtResource("1_y0hnh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

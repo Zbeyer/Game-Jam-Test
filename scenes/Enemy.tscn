@@ -1,3 +1,31 @@
-[gd_scene format=3 uid="uid://b8ugh1dcah2lb"]
+[gd_scene load_steps=6 format=3 uid="uid://b8ugh1dcah2lb"]
 
-[node name="Enemy" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://bnrn3ikqxc615" path="res://assets/sample/boxes.drawio.png" id="1_u6ukt"]
+[ext_resource type="PackedScene" uid="uid://w2doabrquijt" path="res://scenes/Hurtzone.tscn" id="2_2lllf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iamm5"]
+atlas = ExtResource("1_u6ukt")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pwiah"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iamm5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4i0j"]
+
+[node name="Enemy" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pwiah")
+
+[node name="Hurtzone" parent="." instance=ExtResource("2_2lllf")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtzone"]
+shape = SubResource("RectangleShape2D_h4i0j")
