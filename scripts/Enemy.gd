@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 45
+const SPEED = 80
 
 var direction = 1;
 
